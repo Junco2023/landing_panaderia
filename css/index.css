@@ -1,0 +1,42 @@
+
+  
+  #slider .slider .slides li {
+   z-index:0;
+    background: rgba(0, 0, 0, 9); /* Ajustá opacidad acá: 0.3-0.6 suele ser ideal */
+    
+  }
+  #slider .slider .slides li img{
+    
+    opacity:0.6;
+   }
+  
+  /* Texto dentro del slider (títulos y subtítulos) */
+  #slider .slider .slides li .caption h3,
+  #slider .slider .slides li .caption h2{
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5); /* Sombra para legibilidad */
+    letter-spacing: 2px;
+  }
+ 
+  
+  
+  /* Opcional: que los textos blancos no se vean opacos sobre fondo blanco */
+  #slider .slider .slides li .caption .white-text {
+    color: #ffffff !important;
+  }
+  
+  /*********************** seccion productos **********************/
+  /*boton wsp*/
+  /** en card */
+  .btn-floating.whatsapp-btn {
+    background-color: #795548; /* marrón base */
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-floating.whatsapp-btn:hover {
+    background-color: #25D366; /* verde WhatsApp */
+  }
+  
+  
+    
+  

@@ -1,0 +1,564 @@
+<!--
+🎨 PALETA DE COLORES - Panadería artesanal usando Materialize
+
+Colores nativos seleccionados:
+------------------------------
+- brown darken-2     (#5D4037) → Fondo de navbar, títulos, texto principal
+- brown lighten-4    (#D7CCC8) → Fondo de tarjetas o secciones suaves
+- amber lighten-5    (#FFF8E1) → Fondo general del sitio
+- amber lighten-3    (#FFD54F) → Botones y elementos destacados
+- grey darken-1      (#757575) → Footer, bordes, texto secundario
+
+📌 APLICACIÓN EN LA PÁGINA:
+---------------------------
+- body:           class="amber lighten-5 brown-text"   → fondo crema + texto marrón
+- navbar:         class="brown darken-2 white-text"    → marrón oscuro + texto claro
+- títulos:        class="brown-text text-darken-3"     → h1, h2 destacados
+- botones:        class="btn amber lighten-3 brown-text text-darken-3"
+- secciones:      class="brown lighten-4"              → tarjetas suaves, bloques
+- footer:         class="grey darken-1 white-text center"
+
+🧠 Nota: Usá clases de Materialize como:
+  - "btn", "card", "container", "row", "col", "sidenav", etc.
+  - Siempre que uses clases de color, podés combinarlas con "text-" o "darken/lighten-X"
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>Panaderia Casera | Sitio web de ejemplo </title>
+  <!-- Meta SEO -->
+  <meta name="description"
+    content="Ejemplo de landing page simple para panadería artesanal. Diseño web estático profesional, ideal para mostrar productos, ubicación y contacto.">
+
+
+  <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+  <meta property="og:title" content="Ejemplo de landing page para Panadería | Diseño Web Profesional">
+  <meta property="og:description"
+    content="Sitio web estático de muestra para pequeños negocios. Ideal para mostrar productos, ubicación y recibir pedidos por WhatsApp. Diseño responsive, simple y funcional.">
+  <meta property="og:image" content="https://tusitio.com/img/panaderia-share.jpg"> <!-- Reemplazar por URL real -->
+  <meta property="og:url" content="https://tusitio.com/ejemplo-panaderia"> <!-- Reemplazar por URL real -->
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Landing page para Panadería - Web de muestra">
+  <meta name="twitter:description"
+    content="Demostración de sitio web estático para panaderías. Diseño web profesional, adaptado a dispositivos móviles, con contacto directo por WhatsApp.">
+  <meta name="twitter:image" content="https://tusitio.com/img/panaderia-share.jpg"> <!-- Reemplazar por URL real -->
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+
+  <!-- Materialize css -->
+  <!-- CSS de Materialize -->
+  <!-- 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  -->
+  <link rel="stylesheet" href="/materialize/css/materialize.min.css">
+
+  <link rel="stylesheet" href="css/index.css">
+  <!--Iconos-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Panadería Juan",
+      "description": "Panadería artesanal en Lomas de Zamora. Pan casero, budines, facturas y más.",
+      "image": "https://tusitio.com/img/panaderia.jpg",
+      "telephone": "+54911",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Barrio ficticio",
+        "addressLocality": "Lomas de Zamora",
+        "addressRegion": "Bs.As",
+        "addressCountry": "AR"
+      },
+      "openingHours": "Tu-Su 16:00-19:00"
+    }
+    </script>
+
+
+</head>
+
+<body class="amber lighten-5 brown-text" itemscope itemtype="https://schema.org/Bakery">
+
+  <header>
+    <div class="navbar-fixed">
+      <nav class="brown darken-2">
+
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo white-text">Panaderia</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+              class="material-icons white-text">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a class="flow-text hoverable" href="#sobre-mi">Sobre Mi</a></li>
+            <li><a class="flow-text hoverable" href="#productos">Productos</a></li>
+            <li><a class="flow-text hoverable" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+    <ul class="sidenav brown darken-2" id="mobile-demo">
+      <li><a href="#!" class="brand-logo white-text  "><span>
+            <h3>Panaderia</h3>
+          </span></a></li>
+      <li><a href="#sobre-mi" class="amber-text  text-lighten-4 sidenav-close">Sobre Mi</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="#productos" class="amber-text  text-lighten-4 sidenav-close">Productos</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="#contacto" class="amber-text  text-lighten-4 sidenav-close">Contacto</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="#comentarios" class="amber-text  text-lighten-4 sidenav-close">Comentarios</a></li> 
+      <li><a href="#!" class="sidenav-close left"><i class="material-icons white-text ">arrow_back</i></a></li>
+    </ul>
+
+  </header>
+  <main class="contenedor">
+    <section class="section">
+      <h1 itemprop="name" class="center">Panadería Juan</h1>
+    </section>
+    <!--Boton flotante wsp-->
+    <a href="https://wa.me/5491156097242?text=hola" target="_blank"
+      class="btn-floating btn-large green pulse btn tooltipped"
+      style="position:fixed;bottom:20px;right:20px;z-index:1000;" aria-label="Contacto por WhatsApp"
+      data-position="left" data-tooltip="Envia tu msj">
+      <i class="fa-brands fa-whatsapp fa-2xl"></i>
+    </a>
+
+    <!--  slider -->
+    <section id="slider">
+      <div class="slider">
+        <ul class="slides">
+          <!--  img 1 -->
+          <li>
+            <img src="img/slider/huevos-harina.jpg" alt="Huevos frescos y harina para preparar masa casera">
+            <!-- random image -->
+            <div class="caption right-align">
+              <h2 class="white-text text-darken-3 ">Ingredientes frescos y seleccionados </h2>
+              <h3 class="white-text text-darken-4">Solo lo mejor para nuestras recetas artesanales.</h3>
+            </div>
+          </li>
+          <!--  img 2 -->
+          <li>
+            <img src="img/slider/manos-amasando.jpg" alt="Manos amasando masa fresca a mano"> <!-- random image -->
+            <div class="caption left-align">
+              <h2 class="white-text text-darken-3">Hecho por manos expertas !!!</h2>
+              <h3 class="white-text text-darken-4">Con pasion y dedicacion en cada pieza.</h3>
+            </div>
+          </li>
+          <!--  img 3 -->
+          <li>
+            <img src="img/slider/variedad-de-facturas.jpg" alt="Variedad de facturas caseras recién horneadas">
+            <!-- random image -->
+            <div class="caption center-align">
+              <h2 class="white-text text-darken-4">Delicias recien horneadas </h2>
+              <h3 class="white-text text-darken-4">Pan Casero, facturas, rosquitas y mas listas para acompañar tus
+                desayunos y meriendas .</h3>
+            </div>
+          </li>
+          <!--  img 4 -->
+          <li>
+            <img src="img/slider/enviar-msj.jpg" alt="Persona haciendo pedido por celular desde WhatsApp">
+            <!-- random image -->
+            <div class="caption left-align">
+              <h2 class="white-text text-darken-4">Hacé tu pedido por WhatsApp, fácil y rápido</h2>
+              <h3 class="white-text text-darken-4">Retirá en el local o te lo llevamos a casa</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section id="sobre-mi" class="section amber lighten-4">
+      <div class="container">
+        <h2 class="center-align">Sobre Mi</h2>
+        <div class="row">
+          <div class="col s12 m4 l6 ">
+
+            <p class="left-align flow-text">Hola , soy Juan,un emprendedor del barrio </p>
+            <p class="left-align flow-text">Desde chico me encantó preparar pan y dulces para mi familia. Empecé a
+              vender en casa hace unos años, y
+              desde
+              entonces, cocino con amor para mis vecinos.
+
+            </p>
+
+            <p class="left-align flow-text">Trabajo de martes a domingos haciendo pan, bizcochuelos, cuernitos,
+              rosquitas y tartas por pedido. Todo
+              fresco,
+              casero y con mucho cariño. También hago entregas a domicilio dentro del barrio.
+            </p>
+
+          </div>
+          <div class="center-align col s12 m8 l6 ">
+            <img class="circle responsive-img" loading="lazy" src="img/otros/32287 (1).jpg"
+              alt="Panadero artesanal - Sobre mi">
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="productos" class="lighten-3">
+      <div class="container">
+        <h2 class="center">Nuestros productos</h2>
+
+        <div class="row">
+          <!-- Producto 1 -->
+          <div class="col s12 m6 l4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/productos/pan-casero.jpg" alt="Pan Casero">
+                <a href="https://wa.me/5491156097242?text=hola" target="_blank"
+                  class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn hoverable btn tooltipped"
+                  data-position="top" data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+              </div>
+              <div class="card-content">
+
+                <h5 class="card-title brown-text center">Pan Casero</h5>
+
+                <p>Hecho a mano con masa madre. Ideal para compartir en familia.</p>
+                <div class="section">
+                  <div class="divider"></div>
+                </div>
+                <h6><strong>Precio :</strong> $ 3.000 x kg</h6>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="col s12 m6 l4">
+            <div class="card hoverable">
+              <div class="card-image ">
+                <img src="img/productos/rosquitas.jpg" alt="Rosquitas">
+                <a href="https://wa.me/5491156097242?text=hola" target="_blank"
+                  class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped"
+                  data-position="top" data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+              </div>
+              <div class="card-content">
+                <h5 class="card-title brown-text center">Rosquitas</h5>
+                <p>Tiernas y dulces, una delicia casera para el mate o la merienda</p>
+                <div class="section">
+                  <div class="divider"></div>
+                </div>
+                <h6><strong>Precio :</strong> $ 5.000 x docena</h6>
+              </div>
+
+
+            </div>
+          </div>
+
+          <!-- Producto 3  -->
+          <div class="col s12 m6 l4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/productos/facturas.jpg" alt="Rosquitas">
+                <a class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped"
+                  href="https://wa.me/5491156097242?text=hola" target="_blank" data-position="top"
+                  data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+              </div>
+              <div class="card-content">
+                <h5 class="card-title brown-text center">Facturas</h5>
+                <p>Tiernas y dulces, una delicia casera para el mate o la merienda.</p>
+                <div class="section">
+                  <div class="divider"></div>
+                </div>
+                <h6><strong>Precio:</strong> $ 5.000 x docena</h6>
+              </div>
+
+            </div>
+          </div>
+          <!-- Producto 4  -->
+          <div class="col s12 m6 l4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="img/productos/budin.jpg" alt="Budines">
+                <a class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped"
+                  href="https://wa.me/5491156097242?text=hola" target="_blank" data-position="top"
+                  data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+              </div>
+              <div class="card-content">
+                <h5 class="card-title brown-text center">Budin</h5>
+                <p>Tiernas y dulces, una delicia casera para el mate o la merienda.</p>
+                <div class="section">
+                  <div class="divider"></div>
+                </div>
+                <h6><strong>Precio:</strong> $ 5.000 x unidad</h6>
+              </div>
+
+            </div>
+          </div>
+          <!-- ... -->
+        </div>
+      </div>
+    </section>
+
+    <section id="como-pedir" class="section amber lighten-4">
+      <div class="container">
+        <h2 class="center">¿Cómo hacer tu pedido?</h2>
+        <ul class="collection">
+          <li class="collection-item">1️ - Elegí el producto que más te guste</li>
+          <li class="collection-item">2️ - Escribinos por WhatsApp con tu pedido</li>
+          <li class="collection-item">3️ - Coordinamos horario de retiro o entrega</li>
+          <li class="collection-item">4️ - ¡Disfrutalo fresco y casero!</li>
+        </ul>
+      </div>
+
+    </section>
+
+
+    <section class="section" id="contacto" itemscope itemtype="https://schema.org/LocalBusiness">
+      <div class="container">
+        <h2 class="center" itemprop="name">Panadería Juan - Contacto</h2>
+
+        <div>
+          <div class="row">
+            <!-- Horarios -->
+            <div class="col s12 m4 l4">
+              <h3 class="center flow-text">
+                <i class="material-icons small">access_time</i>
+                <strong>Horarios:</strong>
+              </h3>
+              <p class="center flow-text">
+                <time itemprop="openingHours" datetime="Tu-Su 16:00-19:00">Martes a Domingo de 16 a 19 hs</time>
+              </p>
+            </div>
+            <!-- Envios-->
+            <div class="col s12 m4 l4">
+              <h3 class="center flow-text">
+                <i class="material-icons small">local_shipping</i>
+                <strong>Envíos a Domicilio:</strong>
+              </h3>
+              <p class="center flow-text">Desde las 16:00 hs solo en Lomas de Zamora, Bs.As</p>
+            </div>
+            <!-- Ubicacion-->
+            <div class="col s12 m4 l4" itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
+              <h3 class="center flow-text ">
+                <i class="material-icons small">place</i>
+                <strong>Ubicación:</strong>
+              </h3>
+              <p class="center flow-text">
+                <span itemprop="streetAddress">Barrio ficticio</span>,
+                <span itemprop="addressLocality">Lomas de Zamora</span>,
+                <span itemprop="addressRegion">Bs.As</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="center" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+            <a href="https://wa.me/5491161644106" class="btn brown tooltipped hoverable " data-position="left"
+              data-tooltip="Envia tu msj" itemprop="url" target="_blank" rel="noopener">
+              <i class=" material-icons left ">send</i>Enviar Wsp
+            </a>
+            <meta itemprop="contactType" content="customer service" />
+            <meta itemprop="telephone" content="+5491161644106" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="section container">
+        <div class="video-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.7928308147316!2d-58.39954478885171!3d-34.760811165698264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd2952f239e85%3A0x6da5bbe95ddeb749!2sEstaci%C3%B3n%20Lomas%20de%20Zamora!5e0!3m2!1ses-419!2sar!4v1753782733278!5m2!1ses-419!2sar"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </section>
+    <!-- *** seccion comentarios ***-->
+    <section class="section amber lighten-4" id="comentarios">
+      <div class="container">
+        <h3 class="center brown-text text-darken-3">Comentarios de nuestros clientes</h3>
+        <!-- comentarios -->
+        <div class="card-panel white lighten-4">
+          <span class="brown-text text-darken-4 ">
+            <strong>Maria L.</strong>
+          </span><br>
+          <span class="amber-text">
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+
+          </span>
+          </span>
+          <p>Soy vecina del barrio y les compro hace años , ¡Las roquitas son increibles ! Las
+            recomiendo .</p>
+        </div>
+        <div class="card-panel white lighten-4">
+          <span class="brown-text text-darken-4 ">
+            <strong>Santiago F.</strong>
+          </span><br>
+          <span class="amber-text">
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+
+          </span>
+          </span>
+          <p>Un amigo me paso el link de la pagina y ahora todos los miercoles me llevo
+            budines cuando vuelvo del trabajo</p>
+        </div>
+        <div class="card-panel white lighten-4">
+          <span class="brown-text text-darken-4 ">
+            <strong>Lorena Ñ.</strong>
+          </span><br>
+          <span class="amber-text">
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-regular fa-star fa-xl"></i>
+
+          </span>
+          </span>
+          <p>Los encontre en google por su pagina ,se veia todo muy rico . Mande WhatsApp y
+            llego rapidisimo.</p>
+        </div>
+        <div class="card-panel white lighten-4">
+          <span class="brown-text text-darken-4 ">
+            <strong>Jorge P.</strong>
+          </span><br>
+          <span class="amber-text">
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star fa-xl"></i>
+            <i class="fa-solid fa-star-half-stroke fa-xl"></i>
+
+          </span>
+          </span>
+          <p>Siempre les pido bizcochuelo y a las 5 ya lo tengo en casa sin moverme.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="page-footer brown darken-2 center">
+    <div>
+      <div class="row">
+        <!---->
+        <div class="col l12 m12 s12">
+          <h4 class="amber-text">Panaderia</h4>
+          <p class="flow-text amber-text text-lighten-4">Productos frescos todos los dias , ademas realizamos pedidos
+            por encargo.
+          </p>
+          <p class="flow-text amber-text text-lighten-4">No dudes en contactarte</p>
+          <p class="flow-text amber-text text-lighten-4">Hacemos entregas en la zona Lomas de zamora </p>
+        </div>
+        <!---->
+        <div class="col l12 m12 s12">
+          <div class="row">
+
+            <!---->
+            <h4 class="amber-text ">Navegacion Rapida</h4>
+
+            <ul class="row flow-text">
+              <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable " href="#slider">Inicio</a>
+              </li>
+              <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable" href="#sobre-mi">Sobre
+                  mi</a></li>
+              <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable"
+                  href="#productos">Productos</a></li>
+              <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable"
+                  href="#contacto">Contacto</a></li>
+              <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable"
+                  href="#comentarios">Comentarios</a></li>
+
+            </ul>
+          </div>
+
+        </div>
+        <!---->
+        <div class="col l12 s12 m12">
+          <h4 class="amber-text ">Buscanos en redes : </h4>
+          <ul class="row">
+
+            <!-- facebook -->
+            <li class="col s3 m3 l3 center"><a class="amber-text text-lighten-4 hoverable" href="" target="_blank"
+                rel="noopener"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+            <!-- Instagram -->
+            <li class="col s2 m2 l2"><a class="amber-text text-lighten-4 hoverable" href="" target="_blank"
+                rel="noopener"><i class="fa-brands fa-instagram fa-2xl"></i>
+                </i></a></li>
+            <!-- whatsapp-->
+            <li class="col s2 m2 l2 "><a class="amber-text text-lighten-4 hoverable" href="" target="_blank"
+                rel="noopener"><i class="fa-brands fa-whatsapp fa-2xl"></i></a></li>
+            <!-- twiter -->
+            <li class="col s2 m2 l2"><a class="amber-text text-lighten-4 hoverable" href="" target="_blank"
+                rel="noopener"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+            <!-- Youtube -->
+            <li class="col s2 m2 l2"><a class="amber-text text-lighten-4 hoverable" href="" target="_blank"
+                rel="noopener"><i class="fa-brands fa-youtube fa-2xl"></i></a></li>
+
+          </ul>
+        </div>
+        <!---->
+      </div>
+      <!-- -->
+      <div class="row brown lighten-1">
+        <div class="col s12">
+          <p class="amber-text text-lighten-4 center">
+            Esta página es una <strong>plantilla de ejemplo</strong> para diseño web personalizado.
+            Los íconos son de <a href="https://fontawesome.com/" target="_blank" class="amber-text text-lighten-3">Font
+              Awesome</a> y <a href="https://materializecss.com/" target="_blank"
+              class="amber-text text-lighten-3">Materialize</a>
+            y las imágenes utilizadas son demostrativas.
+          </p>
+          <p class="amber-text text-lighten-4 center">
+            ¿Te gustó el diseño? Podés <strong>adquirir esta plantilla</strong> o solicitar una página personalizada.
+            <a href="https://wa.me/5491161644106?text=Hola,vi la plantilla de anderia . Quiero consultar los precios"
+              target="_blank" class="amber-text text-lighten-3">Consultá por WhatsApp</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- fin container -->
+      <div class="footer-copyright">
+        <div class="container amber-text">
+          © 2025 Matias Gonzalez . Todos los derechos reservados
+          <a class="amber-text right"
+            href="https://wa.me/5491161644106?text=Hola,Quiero consultar los precios para mi pagina web"
+            target="_blank">Diseño Web</a>
+        </div>
+      </div>
+  </footer>
+
+  <!-- Materialize JavaScript -->
+  <!-- JS de Materialize -->
+  <!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  -->
+  <script src="/materialize/js/materialize.min.js"></script>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
