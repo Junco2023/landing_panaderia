@@ -1,14 +1,14 @@
 const CACHE_NAME = "pwa-cache-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/offline.html",
-  "/materialize/css/materialize.min.css",
-  "/materialize/js/materialize.min.js",
-  "/js/index.js",
-  "/css/index.css",
-  "/img/slider/huevos-harina.jpg",
-  "/img/iconos/facebook.png"
+  "./",
+  "./index.html",
+  "./offline.html",
+  "./materialize/css/materialize.min.css",
+  "./materialize/js/materialize.min.js",
+  "./js/index.js",
+  "./css/index.css",
+  "./img/slider/huevos-harina.jpg",
+  "./img/iconos/facebook.png"
 ];
 
 self.addEventListener("install", (event) => {
@@ -28,7 +28,7 @@ self.addEventListener("fetch", (event) => {
       return fetch(event.request).catch(() => {
         // Si no hay red y la petición es para una página HTML, muestra offline.html
         if (event.request.destination === 'document') {
-          return caches.match('/offline.html');
+          return caches.match('offline.html');
         }
       });
     })
