@@ -30,17 +30,29 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  /*pwa condig*/
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js")
-        .then(registration => {
-          console.log("Service Worker registrado con éxito:", registration.scope);
-        })
-        .catch(error => {
-          console.log("Fallo al registrar el Service Worker:", error);
-        });
-    });
-  }
+  /* pwa config */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js")
+      .then(registration => {
+        console.log("Service Worker registrado con éxito:", registration.scope);
+
+        // Escuchar si hay una nueva versión del SW
+        registration.onupdatefound = () => {
+          const newWorker = registration.installing;
+          newWorker.onstatechange = () => {
+            if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+              console.log("Nueva versión disponible, recargando...");
+              window.location.reload();
+            }
+          };
+        };
+      })
+      .catch(error => {
+        console.log("Fallo al registrar el Service Worker:", error);
+      });
+  });
+}
+
   
 });

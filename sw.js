@@ -18,23 +18,7 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(urlsToCache);
-    })
-  );
-});
-
-self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).catch(() => {
-        // Si no hay red y la petición es para una página HTML, muestra offline.html
-        if (event.request.destination === 'document') {
-          return caches.match('offline.html');
-        }
-      });
-    })
+    }).then(() => self.skipWaiting())  // <=== forzamos activar SW nuevo inmediatamente
   );
 });
 
@@ -45,6 +29,22 @@ self.addEventListener("activate", (event) => {
         keys.filter(key => key !== CACHE_NAME)
             .map(key => caches.delete(key))
       );
+    }).then(() => self.clients.claim())  // <=== toma control inmediato de clientes abiertos
+  );
+});
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then(cachedResponse => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request).catch(() => {
+        if (event.request.destination === 'document') {
+          return caches.match('offline.html');
+        }
+      });
     })
   );
 });
+
