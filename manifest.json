@@ -2,6 +2,7 @@
     "name": "Panaderia Web| Ejemplo de landing page",
     "short_name": "Panadería",
     "start_url": ".",
+    "id":".",
     "display": "standalone",
     "background_color": "#fff3e0",
     "theme_color": "#6d4c41",
