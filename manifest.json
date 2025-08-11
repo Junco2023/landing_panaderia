@@ -1,5 +1,5 @@
 {
-    "name": "Panadería Juan",
+    "name": "Panaderia Web| Ejemplo de landing page",
     "short_name": "Panadería",
     "start_url": ".",
     "display": "standalone",
@@ -7,12 +7,12 @@
     "theme_color": "#6d4c41",
     "icons": [
       {
-        "src": "img/iconos/facebook.png",
+        "src": "img/iconos/logo-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "img/iconos/facebook.png",
+        "src": "img/iconos/logo-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       }

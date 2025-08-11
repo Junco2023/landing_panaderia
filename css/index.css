@@ -1,5 +1,13 @@
 
-  
+  /*    logo  */
+  header .navbar-fixed nav .nav-wrapper .brand-logo {
+    height: 100%;
+    
+  }
+  header .navbar-fixed nav .nav-wrapper .brand-logo  img{
+    height: 100%;
+  }
+
   #slider .slider .slides li {
    z-index:0;
     background: rgba(0, 0, 0, 9); /* Ajustá opacidad acá: 0.3-0.6 suele ser ideal */
@@ -30,13 +38,32 @@
   /** en card */
   .btn-floating.whatsapp-btn {
     background-color: #795548; /* marrón base */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
   }
   
   .btn-floating.whatsapp-btn:hover {
     background-color: #25D366; /* verde WhatsApp */
   }
   
+  
+  #mobile-demo #logo {
+    height: 200px;
+  }
+  #mobile-demo #logo a{
+    height: 100%;
+  }
+  #mobile-demo #logo a img{
+    height: 100%;
+  }
+ 
+  /* seccion sobre-mi*/
+  #sobre-mi .container .row .col img{
+     width: 300px;
+     height: 400px;
+  }
+  @media(max-width:992px){
+     
+  }
   
     
   

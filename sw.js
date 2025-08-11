@@ -8,7 +8,10 @@ const urlsToCache = [
   "./js/index.js",
   "./css/index.css",
   "./img/slider/huevos-harina.jpg",
-  "./img/iconos/facebook.png"
+  "./img/iconos/logo-500x500.png",
+  "./img/iconos/logo-512x512.png",
+  "./img/iconos/favicon-192x192.png",
+  "./img/iconos/favicon-32x32.png"
 ];
 
 self.addEventListener("install", (event) => {

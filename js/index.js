@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
     inDuration:300,
     transitionMovement:1
   });
+  //modal
+  const modal=document.querySelectorAll('.modal');
+  var instanciaModal=M.Modal.init(modal);
 
   //cerrar sidenav al hacer click en enlace
   const sidenavsLinks = document.querySelectorAll('.sidenav a');

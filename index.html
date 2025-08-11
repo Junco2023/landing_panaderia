@@ -33,13 +33,13 @@ Colores nativos seleccionados:
   <title>Panaderia Casera | Sitio web de ejemplo </title>
   <!-- Meta SEO -->
   <meta name="description"
-    content="Ejemplo de landing page simple para panadería artesanal. Diseño web estático profesional, ideal para mostrar productos, ubicación y contacto.">
+    content="Ejemplo de landing page simple para panadería artesanal. Diseño web estático profesional, ideal para mostrar productos, ubicación y contacto en cualquier dispositivo.">
 
 
   <!-- Open Graph (Facebook, WhatsApp, etc.) -->
   <meta property="og:title" content="Ejemplo de landing page para Panadería | Diseño Web Profesional">
   <meta property="og:description"
-    content="Sitio web estático de muestra para pequeños negocios. Ideal para mostrar productos, ubicación y recibir pedidos por WhatsApp. Diseño responsive, simple y funcional.">
+    content="Ejemplo de landing page para panaderías artesanales. Creamos sitios web profesionales, rápidos y adaptados a móviles para que tu negocio venda más y llegue a más clientes.">
   <meta property="og:image" content="https://tusitio.com/img/panaderia-share.jpg"> <!-- Reemplazar por URL real -->
   <meta property="og:url" content="https://tusitio.com/ejemplo-panaderia"> <!-- Reemplazar por URL real -->
   <meta property="og:type" content="website">
@@ -48,20 +48,17 @@ Colores nativos seleccionados:
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Landing page para Panadería - Web de muestra">
   <meta name="twitter:description"
-    content="Demostración de sitio web estático para panaderías. Diseño web profesional, adaptado a dispositivos móviles, con contacto directo por WhatsApp.">
+    content="Ejemplo de landing page para panaderías artesanales. Creamos sitios web profesionales, rápidos y adaptados a móviles para que tu negocio venda más y llegue a más clientes.">
   <meta name="twitter:image" content="https://tusitio.com/img/panaderia-share.jpg"> <!-- Reemplazar por URL real -->
 
   <!-- favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="img/iconos/favicon.ico">
   <!-- manifest -->
   <link rel="manifest" href="manifest.json">
 
 
   <!-- Materialize css -->
   <!-- CSS de Materialize -->
-  <!-- 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  -->
   <link rel="stylesheet" href="materialize/css/materialize.min.css">
 
   <link rel="stylesheet" href="css/index.css">
@@ -70,41 +67,55 @@ Colores nativos seleccionados:
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Panadería Juan",
-      "description": "Panadería artesanal en Lomas de Zamora. Pan casero, budines, facturas y más.",
-      "image": "https://tusitio.com/img/panaderia.jpg",
-      "telephone": "+54911",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Barrio ficticio",
-        "addressLocality": "Lomas de Zamora",
-        "addressRegion": "Bs.As",
-        "addressCountry": "AR"
-      },
-      "openingHours": "Tu-Su 16:00-19:00"
-    }
-    </script>
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Webs a la Carta",
+        "description": "Diseño landing pages personalizadas y plantillas listas para cualquier emprendimiento. Sitios rápidos, optimizados para móviles y preparados para aumentar tus ventas.
+        ",
+        "image": "https://tusitio.com/img/plantilla-panaderia.jpg",
+        "telephone": "+5491161644106",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Lomas de Zamora",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "openingHours": "Lun-Vie 09:00-18:00",
+        "url": "https://tusitio.com", 
+        "sameAs": "https://facebook.com/tuempresa"  // Enlace a redes sociales o perfiles
+      }
+      </script>
+
 
 
 </head>
 
 <body class="amber lighten-5 brown-text" itemscope itemtype="https://schema.org/Bakery">
-
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Boton a WhatsApp</h4>
+      <p>Este boton dirige tus clientes a tu whatsapp</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>
   <header>
     <div class="navbar-fixed">
       <nav class="brown darken-2">
 
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo white-text">Panaderia</a>
+          <a href="index.html" class="brand-logo"><img class="circle responsive-img" src="img/iconos/logo-512x512.png"
+              alt="logo de panaderia-landing page" loading="lazy"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
               class="material-icons white-text">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a class="flow-text hoverable" href="#sobre-mi">Sobre Mi</a></li>
-            <li><a class="flow-text hoverable" href="#productos">Productos</a></li>
-            <li><a class="flow-text hoverable" href="#contacto">Contacto</a></li>
+            <li><a class="hoverable" href="#sobre-mi">Sobre Mi</a></li>
+            <li><a class="hoverable" href="#productos">Productos</a></li>
+            <li><a class="hoverable" href="#contacto">Contacto</a></li>
+            <li><a class="hoverable" href="#cometarios">Comentarios</a></li>
           </ul>
         </div>
 
@@ -112,8 +123,10 @@ Colores nativos seleccionados:
     </div>
 
     <ul class="sidenav brown darken-2" id="mobile-demo">
-      <li><a href="#!" class="brand-logo white-text  "><span>
-            <h3>Panaderia</h3>
+
+      <li id="logo"><a href="#!" class="brand-logo white-text center"><span>
+            <img class="circle responsive-img" src="img/iconos/logo-512x512.png" alt="logo de panaderia-landing page"
+              loading="lazy">
           </span></a></li>
       <li><a href="#sobre-mi" class="amber-text  text-lighten-4 sidenav-close">Sobre Mi</a></li>
       <li>
@@ -127,7 +140,7 @@ Colores nativos seleccionados:
       <li>
         <div class="divider"></div>
       </li>
-      <li><a href="#comentarios" class="amber-text  text-lighten-4 sidenav-close">Comentarios</a></li> 
+      <li><a href="#comentarios" class="amber-text  text-lighten-4 sidenav-close">Comentarios</a></li>
       <li><a href="#!" class="sidenav-close left"><i class="material-icons white-text ">arrow_back</i></a></li>
     </ul>
 
@@ -137,10 +150,11 @@ Colores nativos seleccionados:
       <h1 itemprop="name" class="center">Panadería Juan</h1>
     </section>
     <!--Boton flotante wsp-->
-    <a href="https://wa.me/5491156097242?text=hola" target="_blank"
-      class="btn-floating btn-large green pulse btn tooltipped"
+
+    <a href="https://wa.me/5491161644106?text=Hola.llegue desde tu landing page.Quiero consultar los precios de las landing page."
+      target="_blank" class="btn-floating btn-large green pulse btn tooltipped"
       style="position:fixed;bottom:20px;right:20px;z-index:1000;" aria-label="Contacto por WhatsApp"
-      data-position="left" data-tooltip="Envia tu msj">
+      data-position="right" data-tooltip="Envia tu msj">
       <i class="fa-brands fa-whatsapp fa-2xl"></i>
     </a>
 
@@ -150,7 +164,8 @@ Colores nativos seleccionados:
         <ul class="slides">
           <!--  img 1 -->
           <li>
-            <img src="img/slider/huevos-harina.jpg" alt="Huevos frescos y harina para preparar masa casera">
+            <img src="img/slider/huevos-harina.jpeg" alt="Huevos frescos y harina para preparar masa casera"
+              loading="lazy">
             <!-- random image -->
             <div class="caption right-align">
               <h2 class="white-text text-darken-3 ">Ingredientes frescos y seleccionados </h2>
@@ -159,7 +174,8 @@ Colores nativos seleccionados:
           </li>
           <!--  img 2 -->
           <li>
-            <img src="img/slider/manos-amasando.jpg" alt="Manos amasando masa fresca a mano"> <!-- random image -->
+            <img src="img/slider/manos-amasando.jpeg" alt="Manos amasando masa fresca a mano" loading="lazy">
+            <!-- random image -->
             <div class="caption left-align">
               <h2 class="white-text text-darken-3">Hecho por manos expertas !!!</h2>
               <h3 class="white-text text-darken-4">Con pasion y dedicacion en cada pieza.</h3>
@@ -167,7 +183,8 @@ Colores nativos seleccionados:
           </li>
           <!--  img 3 -->
           <li>
-            <img src="img/slider/variedad-de-facturas.jpg" alt="Variedad de facturas caseras recién horneadas">
+            <img src="img/slider/variedad-de-facturas.jpeg" alt="Variedad de facturas caseras recién horneadas"
+              loading="lazy">
             <!-- random image -->
             <div class="caption center-align">
               <h2 class="white-text text-darken-4">Delicias recien horneadas </h2>
@@ -177,7 +194,8 @@ Colores nativos seleccionados:
           </li>
           <!--  img 4 -->
           <li>
-            <img src="img/slider/enviar-msj.jpg" alt="Persona haciendo pedido por celular desde WhatsApp">
+            <img src="img/slider/enviar-msj.jpeg" alt="Persona haciendo pedido por celular desde WhatsApp"
+              loading="lazy">
             <!-- random image -->
             <div class="caption left-align">
               <h2 class="white-text text-darken-4">Hacé tu pedido por WhatsApp, fácil y rápido</h2>
@@ -193,7 +211,7 @@ Colores nativos seleccionados:
       <div class="container">
         <h2 class="center-align">Sobre Mi</h2>
         <div class="row">
-          <div class="col s12 m4 l6 ">
+          <div class="col s12 m12 l6 ">
 
             <p class="left-align flow-text">Hola , soy Juan,un emprendedor del barrio </p>
             <p class="left-align flow-text">Desde chico me encantó preparar pan y dulces para mi familia. Empecé a
@@ -210,9 +228,9 @@ Colores nativos seleccionados:
             </p>
 
           </div>
-          <div class="center-align col s12 m8 l6 ">
-            <img class="circle responsive-img" loading="lazy" src="img/otros/32287 (1).jpg"
-              alt="Panadero artesanal - Sobre mi">
+          <div class="center-align col s12 m12 l6 ">
+            <img class=" circle responsive-img left-align" loading="lazy" src="img/otros/foto-perfil-panadero.jpg"
+              alt="Foto de perfil de panadero artesanal - Sobre mi">
           </div>
         </div>
       </div>
@@ -220,17 +238,19 @@ Colores nativos seleccionados:
     </section>
 
     <section id="productos" class="lighten-3">
+
       <div class="container">
         <h2 class="center">Nuestros productos</h2>
+        <p><strong><a href=""></a></strong></p>
 
         <div class="row">
           <!-- Producto 1 -->
           <div class="col s12 m6 l4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/productos/pan-casero.jpg" alt="Pan Casero">
-                <a href="https://wa.me/5491156097242?text=hola" target="_blank"
-                  class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn hoverable btn tooltipped"
+                <img src="img/productos/pan-casero.jpeg" alt="Pan Casero" loading="lazy">
+                <a href="#modal1"
+                  class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn hoverable btn tooltipped modal-trigger"
                   data-position="top" data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
               </div>
               <div class="card-content">
@@ -251,9 +271,9 @@ Colores nativos seleccionados:
           <div class="col s12 m6 l4">
             <div class="card hoverable">
               <div class="card-image ">
-                <img src="img/productos/rosquitas.jpg" alt="Rosquitas">
-                <a href="https://wa.me/5491156097242?text=hola" target="_blank"
-                  class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped"
+                <img src="img/productos/rosquitas.jpeg" alt="Rosquitas-caseras" loading="lazy">
+                <a href="#modal1"
+                  class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped modal-trigger"
                   data-position="top" data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
               </div>
               <div class="card-content">
@@ -273,14 +293,14 @@ Colores nativos seleccionados:
           <div class="col s12 m6 l4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/productos/facturas.jpg" alt="Rosquitas">
-                <a class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped"
-                  href="https://wa.me/5491156097242?text=hola" target="_blank" data-position="top"
-                  data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                <img src="img/productos/facturas.jpeg" alt="facturas-caseras" loading="lazy">
+                <a class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped modal-trigger"
+                  href="#modal1" data-position="top" data-tooltip="Hace tu pedido"><i
+                    class="fa-brands fa-whatsapp fa-2xl"></i></a>
               </div>
               <div class="card-content">
                 <h5 class="card-title brown-text center">Facturas</h5>
-                <p>Tiernas y dulces, una delicia casera para el mate o la merienda.</p>
+                <p>Facturas caseras mixtas, con membrillo, crema pastelera y dulce de leche</p>
                 <div class="section">
                   <div class="divider"></div>
                 </div>
@@ -293,14 +313,14 @@ Colores nativos seleccionados:
           <div class="col s12 m6 l4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/productos/budin.jpg" alt="Budines">
-                <a class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped"
-                  href="https://wa.me/5491156097242?text=hola" target="_blank" data-position="top"
-                  data-tooltip="Hace tu pedido"><i class="fa-brands fa-whatsapp fa-2xl"></i></a>
+                <img src="img/productos/budin.jpeg" alt="Budines" loading="lazy">
+                <a class="btn-floating halfway-fab waves-effect waves-light whatsapp-btn btn tooltipped modal-trigger"
+                  href="#modal1" data-position="top" data-tooltip="Hace tu pedido"><i
+                    class="fa-brands fa-whatsapp fa-2xl"></i></a>
               </div>
               <div class="card-content">
                 <h5 class="card-title brown-text center">Budin</h5>
-                <p>Tiernas y dulces, una delicia casera para el mate o la merienda.</p>
+                <p>Budines esponjosos y frescos. De chocolate , marmolado , vainilla y naranja</p>
                 <div class="section">
                   <div class="divider"></div>
                 </div>
@@ -328,7 +348,7 @@ Colores nativos seleccionados:
     </section>
 
 
-    <section class="section" id="contacto" itemscope itemtype="https://schema.org/LocalBusiness">
+    <section class="section" id="contacto">
       <div class="container">
         <h2 class="center" itemprop="name">Panadería Juan - Contacto</h2>
 
@@ -341,7 +361,7 @@ Colores nativos seleccionados:
                 <strong>Horarios:</strong>
               </h3>
               <p class="center flow-text">
-                <time itemprop="openingHours" datetime="Tu-Su 16:00-19:00">Martes a Domingo de 16 a 19 hs</time>
+                <time>Martes a Domingo de 16 a 19 hs</time>
               </p>
             </div>
             <!-- Envios-->
@@ -353,26 +373,24 @@ Colores nativos seleccionados:
               <p class="center flow-text">Desde las 16:00 hs solo en Lomas de Zamora, Bs.As</p>
             </div>
             <!-- Ubicacion-->
-            <div class="col s12 m4 l4" itemscope itemtype="https://schema.org/PostalAddress" itemprop="address">
+            <div class="col s12 m4 l4">
               <h3 class="center flow-text ">
                 <i class="material-icons small">place</i>
                 <strong>Ubicación:</strong>
               </h3>
               <p class="center flow-text">
-                <span itemprop="streetAddress">Barrio ficticio</span>,
-                <span itemprop="addressLocality">Lomas de Zamora</span>,
-                <span itemprop="addressRegion">Bs.As</span>
+                <span>Barrio ficticio</span>,
+                <span>Lomas de Zamora</span>,
+                <span>Bs.As</span>
               </p>
             </div>
           </div>
 
-          <div class="center" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
-            <a href="https://wa.me/5491161644106" class="btn brown tooltipped hoverable " data-position="left"
-              data-tooltip="Envia tu msj" itemprop="url" target="_blank" rel="noopener">
+          <div class="center">
+            <a href="#modal1" class="btn brown tooltipped hoverable modal-trigger" data-position="left"
+              data-tooltip="Envia tu msj" itemprop="url" rel="noopener">
               <i class=" material-icons left ">send</i>Enviar Wsp
             </a>
-            <meta itemprop="contactType" content="customer service" />
-            <meta itemprop="telephone" content="+5491161644106" />
           </div>
 
         </div>
@@ -475,12 +493,11 @@ Colores nativos seleccionados:
         </div>
         <!---->
         <div class="col l12 m12 s12">
+          <!---->
+          <h4 class="amber-text ">Navegacion Rapida</h4>
           <div class="row">
-
-            <!---->
-            <h4 class="amber-text ">Navegacion Rapida</h4>
-
             <ul class="row flow-text">
+              <li class="col s0 m0 off-set m2 l1 "></li>
               <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable " href="#slider">Inicio</a>
               </li>
               <li class="col s12 m4 l2 center"><a class="amber-text text-lighten-4 hoverable" href="#sobre-mi">Sobre
@@ -530,7 +547,8 @@ Colores nativos seleccionados:
             Los íconos son de <a href="https://fontawesome.com/" target="_blank" class="amber-text text-lighten-3">Font
               Awesome</a> y <a href="https://materializecss.com/" target="_blank"
               class="amber-text text-lighten-3">Materialize</a>
-            y las imágenes utilizadas son demostrativas.
+            y las imágenes utilizadas son de <a href="https://www.freepik.es/" target="_blank"
+              class="amber-text text-lighten-3">Freepik</a> a modo ilustrativo.
           </p>
           <p class="amber-text text-lighten-4 center">
             ¿Te gustó el diseño? Podés <strong>adquirir esta plantilla</strong> o solicitar una página personalizada.
@@ -546,18 +564,14 @@ Colores nativos seleccionados:
           © 2025 Matias Gonzalez . Todos los derechos reservados
           <a class="amber-text right"
             href="https://wa.me/5491161644106?text=Hola,Quiero consultar los precios para mi pagina web"
-            target="_blank">Diseño Web</a>
+            target="_blank">Diseño web personalizado</a>
         </div>
       </div>
   </footer>
 
   <!-- Materialize JavaScript -->
-  <!-- JS de Materialize -->
-  <!-- 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  -->
   <script src="materialize/js/materialize.min.js"></script>
-
+  <!-- JS de Materialize -->
   <script src="js/index.js"></script>
 </body>
 
