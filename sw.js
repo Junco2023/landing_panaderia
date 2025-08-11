@@ -7,7 +7,7 @@ const urlsToCache = [
   "./materialize/js/materialize.min.js",
   "./js/index.js",
   "./css/index.css",
-  "./img/slider/huevos-harina.jpg",
+  "./img/slider/huevos-harina.jpeg",
   "./img/iconos/logo-500x500.png",
   "./img/iconos/logo-512x512.png",
   "./img/iconos/favicon-192x192.png",
